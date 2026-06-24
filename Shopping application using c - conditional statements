@@ -1,0 +1,244 @@
+#include <stdio.h>
+
+int main()
+{ int n=0;
+    do{
+    printf("\n\n***********Welcome to online Shopping**********\n\n###Choose a MENU###\n1.Shoes\n2.Watches\n3.Mobiles\n4.Exit\n");
+   int cp;
+    scanf("%d",&cp);
+    switch(cp){
+          case 1:
+            printf("!!You have selected shoes!!\n--select the brand--\n1.nike\n2.addidas\n3.puma\n");
+            int c;scanf("%d",&c);
+            switch(c){
+                  case 1:
+                  printf("Good-Choice--!!You selected nike!!\nSelect Model\n1.Nike Roshe     -₹18035.8\n2.Nike Air       -₹10229.8\n3.Nike Racer     -₹9855.8\n");
+                  int m;scanf("%d",&m);
+                  switch(m){
+                        case 1:printf("Your Choice are amazing\n You chose Nike Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int a;scanf("%d",&a);
+                        switch(a){
+                              case 1:printf("Hooray!! -- your order for shoe - Nike Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Nike Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int b;scanf("%d",&b);
+                        switch(b){
+                              case 1:printf("Hooray!! -- your order for shoe - Nike Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Nike Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int d;scanf("%d",&d);
+                        switch(d){
+                              case 1:printf("Hooray!! -- your order for shoe - Nike Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 2:
+                  printf("Good-Choice--!!You selected addidas!!\nSelect Model\n1.addidas Roshe     -₹18035.8\n2.addidas Air       -₹10229.8\n3.addidas Racer     -₹9855.8\n");
+                  int aaa;scanf("%d",&aaa);
+                  switch(aaa){
+                        case 1:printf("Your Choice are amazing\n You chose addidas Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bbb;scanf("%d",&bbb);
+                        switch(bbb){
+                              case 1:printf("Hooray!! -- your order for shoe - addidas Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose addidas Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ccc;scanf("%d",&ccc);
+                        switch(ccc){
+                              case 1:printf("Hooray!! -- your order for shoe - addidas Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose addidas Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ddd;scanf("%d",&ddd);
+                        switch(ddd){
+                              case 1:printf("Hooray!! -- your order for shoe - addidas Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 3:
+                  printf("Good-Choice--!!You selected nike!!\nSelect Model\n1.PUMA Roshe     -₹18035.8\n2.PUMA  Air       -₹10229.8\n3.PUMA  Racer     -₹9855.8\n");
+                  int aa;scanf("%d",&aa);
+                  switch(aa){
+                        case 1:printf("Your Choice are amazing\n You chose PUMA  Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bb;scanf("%d",&bb);
+                        switch(bb){
+                              case 1:printf("Hooray!! -- your order for shoe - PUMA  Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose PUMA  Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int cc;scanf("%d",&cc);
+                        switch(cc){
+                              case 1:printf("Hooray!! -- your order for shoe - PUMA  Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose PUMA  Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int dd;scanf("%d",&dd);
+                        switch(dd){
+                              case 1:printf("Hooray!! -- your order for shoe - PUMA  Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+            }break;
+          
+          
+          
+          
+          
+          case 2: printf("!!You have selected Watches!!\n--select the brand--\n1.Fasttrak\n2.Titan\n3.Sonata\n");
+            int ca;scanf("%d",&ca);
+            switch(ca){
+                  case 1:
+                  printf("Good-Choice--!!You selected Fasttrak!!\nSelect Model\n1.Fasttrak Roshe     -₹18035.8\n2.Fasttrak Air       -₹10229.8\n3.Fasttrak Racer     -₹9855.8\n");
+                  int ma;scanf("%d",&ma);
+                  switch(ma){
+                        case 1:printf("Your Choice are amazing\n You chose Fasttrak Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int aab;scanf("%d",&aab);
+                        switch(aab){
+                              case 1:printf("Hooray!! -- your order for Watches - Fasttrak Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Fasttrak Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bab;scanf("%d",&bab);
+                        switch(bab){
+                              case 1:printf("Hooray!! -- your order for Watches - Fasttrak Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Fasttrak Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int dad;scanf("%d",&dad);
+                        switch(dad){
+                              case 1:printf("Hooray!! -- your order for Watches - Fasttrak Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 2:
+                  printf("Good-Choice--!!You selected Titans!!\nSelect Model\n1.Titan Roshe     -₹18035.8\n2.Titan Air       -₹10229.8\n3.Titan Racer     -₹9855.8\n");
+                  int aaad;scanf("%d",&aaad);
+                  switch(aaad){
+                        case 1:printf("Your Choice are amazing\n You chose Titan Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bbbd;scanf("%d",&bbbd);
+                        switch(bbbd){
+                              case 1:printf("Hooray!! -- your order for Watches - Titan Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Titan Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int cccd;scanf("%d",&cccd);
+                        switch(cccd){
+                              case 1:printf("Hooray!! -- your order for Watches - Titan Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Titan Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ddcd;scanf("%d",&ddcd);
+                        switch(ddcd){
+                              case 1:printf("Hooray!! -- your order for Watches - Titan Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 3:
+                  printf("Good-Choice--!!You selected Sonata!!\nSelect Model\n1.Sonata Roshe     -₹18035.8\n2.Sonata  Air       -₹10229.8\n3.Sonata  Racer     -₹9855.8\n");
+                  int aan;scanf("%d",&aan);
+                  switch(aan){
+                        case 1:printf("Your Choice are amazing\n You chose Sonata Roshe \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bbn;scanf("%d",&bbn);
+                        switch(bbn){
+                              case 1:printf("Hooray!! -- your order for Watches - Sonata Roshe - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Sonata Air  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ccn;scanf("%d",&ccn);
+                        switch(ccn){
+                              case 1:printf("Hooray!! -- your order for Watches - Sonata Air - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Sonata Racer \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ddn;scanf("%d",&ddn);
+                        switch(ddn){
+                              case 1:printf("Hooray!! -- your order for Watches - Sonata Racer - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+            }break;
+          
+          case 3:printf("!!You have selected Mobiles!!\n--select the brand--\n1.Vivo\n2.Oneplus\n3.Poco\n");
+            int can;scanf("%d",&can);
+            switch(can){
+                  case 1:
+                  printf("Good-Choice--!!You selected Vivo!!\nSelect Model\n1.Vivo v9     -₹18035.8\n2.Vivo y10       -₹10229.8\n3.Vivo m12e     -₹9855.8\n");
+                  int ma;scanf("%d",&ma);
+                  switch(ma){
+                        case 1:printf("Your Choice are amazing\n You chose Vivo v9 \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int aab;scanf("%d",&aab);
+                        switch(aab){
+                              case 1:printf("Hooray!! -- your order for Mobile - Vivo v9 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Vivo y10  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bab;scanf("%d",&bab);
+                        switch(bab){
+                              case 1:printf("Hooray!! -- your order for Mobile - Vivo y10 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Vivo m12e \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int dad;scanf("%d",&dad);
+                        switch(dad){
+                              case 1:printf("Hooray!! -- your order for Mobile - Vivo m12e - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 2:
+                  printf("Good-Choice--!!You selected OnePlus!!\nSelect Model\n1.OnePlus v9     -₹18035.8\n2.OnePlus y10       -₹10229.8\n3.OnePlus m12e     -₹9855.8\n");
+                  int aaad;scanf("%d",&aaad);
+                  switch(aaad){
+                        case 1:printf("Your Choice are amazing\n You chose OnePlus v9 \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bbbd;scanf("%d",&bbbd);
+                        switch(bbbd){
+                              case 1:printf("Hooray!! -- your order for Mobile - OnePlus v9 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose OnePlus y10  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int cccd;scanf("%d",&cccd);
+                        switch(cccd){
+                              case 1:printf("Hooray!! -- your order for Mobile - OnePlus y10 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose OnePlus m12e \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ddcd;scanf("%d",&ddcd);
+                        switch(ddcd){
+                              case 1:printf("Hooray!! -- your order for Mobile - OnePlus m12e - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+                  case 3:
+                  printf("Good-Choice--!!You selected Poco!!\nSelect Model\n1.Poco v9     -₹18035.8\n2.Poco  y10       -₹10229.8\n3.Poco  m12e     -₹9855.8\n");
+                  int aan;scanf("%d",&aan);
+                  switch(aan){
+                        case 1:printf("Your Choice are amazing\n You chose Poco v9 \n The cost is ₹18035.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int bbn;scanf("%d",&bbn);
+                        switch(bbn){
+                              case 1:printf("Hooray!! -- your order for Mobile - Poco v9 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 2:printf("Your Choice are amazing\n You chose Poco y10  \n The cost is ₹10229.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ccn;scanf("%d",&ccn);
+                        switch(ccn){
+                              case 1:printf("Hooray!! -- your order for Mobile - Poco y10 - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                        case 3:printf("Your Choice are amazing\n You chose Poco m12e \n The cost is ₹9855.8 \n would you like to continue \n1.Yes\n2.No\n");
+                        int ddn;scanf("%d",&ddn);
+                        switch(ddn){
+                              case 1:printf("Hooray!! -- your order for Mobile - Poco m12e - is successful\n=====Keep Shoping=====\n");break;
+                              case 2:printf("Opps--Come again--");break;
+                        }break;
+                  }break;
+            }break;
+            case 4:break;
+            default:printf("Enter a valid Option");break;
+    }
+    n=cp;
+}
+   while(n!=4);
+printf("--@ Thank You For Choosing Us @--");
+    return 0;
+}
