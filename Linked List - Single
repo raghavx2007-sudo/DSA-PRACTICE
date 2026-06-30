@@ -363,3 +363,81 @@ scanf("%d",&n);
 
     return 0;
 }
+SEARCH AN ELEMENT:
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+struct node
+{
+      int data;
+      struct node *next;
+}*head=NULL;
+void append(int val){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head == NULL){
+            head = newnode;
+      }
+      else{
+            struct node *temp = head;
+            while(temp -> next){
+                  temp = temp -> next;
+            }
+            temp -> next = newnode;
+      }
+}
+void display(){
+       struct node *temp = head;
+       while(temp -> next){
+             printf("%d ",temp->data);
+              temp = temp -> next;
+       }
+       printf("%d \n",temp->data);
+}
+bool find(int num){
+      struct node *temp = head;
+      while(temp){
+            if(num == temp -> data)return true;
+            temp = temp -> next;
+      }
+      return false;
+}
+
+int main()
+{     int num;
+scanf("%d",&num);
+      append(10);
+      append(20);
+       append(40);
+        append(50);
+         append(60);
+      display();
+      if(find(num))printf("Element found");
+      else printf("Element Not found");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
