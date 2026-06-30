@@ -205,5 +205,161 @@ int main()
     return 0;
 }
 DELETE AT END:
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+      int data;
+      struct node *next;
+}*head=NULL;
+void append(int val){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head == NULL){
+            head = newnode;
+      }
+      else{
+            struct node *temp = head;
+            while(temp -> next){
+                  temp = temp -> next;
+            }
+            temp -> next = newnode;
+      }
+}
+void display(){
+       struct node *temp = head;
+       while(temp -> next){
+             printf("%d ",temp->data);
+              temp = temp -> next;
+       }
+       printf("%d \n",temp->data);
+}
+void deleteend(){
+      struct node *temp = head;
+      while(temp -> next -> next){
+            temp = temp -> next;
+      }
+      free(temp -> next);
+      temp -> next = NULL;
+}
+int main()
+{
+      append(10);
+      append(20);
+       append(40);
+        append(50);
+         append(60);
+      display();
+      deleteend();
+      display();
+   
+
+    return 0;
+}
 DELETE AT BEGIN:
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+      int data;
+      struct node *next;
+}*head=NULL;
+void append(int val){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head == NULL){
+            head = newnode;
+      }
+      else{
+            struct node *temp = head;
+            while(temp -> next){
+                  temp = temp -> next;
+            }
+            temp -> next = newnode;
+      }
+}
+void display(){
+       struct node *temp = head;
+       while(temp -> next){
+             printf("%d ",temp->data);
+              temp = temp -> next;
+       }
+       printf("%d \n",temp->data);
+}
+void deletebegin(){
+      struct node *temp = head;
+      head = temp -> next;
+      free(temp);
+}
+int main()
+{
+      append(10);
+      append(20);
+       append(40);
+        append(50);
+         append(60);
+      display();
+      deletebegin();
+      display();
+   
+
+    return 0;
+}
 DELETE AT ANY POSITION:
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+      int data;
+      struct node *next;
+}*head=NULL;
+void append(int val){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head == NULL){
+            head = newnode;
+      }
+      else{
+            struct node *temp = head;
+            while(temp -> next){
+                  temp = temp -> next;
+            }
+            temp -> next = newnode;
+      }
+}
+void display(){
+       struct node *temp = head;
+       while(temp -> next){
+             printf("%d ",temp->data);
+              temp = temp -> next;
+       }
+       printf("%d \n",temp->data);
+}
+void deleteatpos(int n){
+  struct node *temp = head;
+  for(int i=1;i<n-1;i++){
+        temp = temp -> next;
+  }
+  struct node *ref = temp -> next;
+  temp -> next = temp -> next -> next;
+  free(ref);
+       
+}
+int main()
+{     int n;
+scanf("%d",&n);
+      append(10);
+      append(20);
+       append(40);
+        append(50);
+         append(60);
+      display();
+      deleteatpos(n);
+      display();
+   
+
+    return 0;
+}
