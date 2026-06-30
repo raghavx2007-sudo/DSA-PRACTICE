@@ -143,6 +143,67 @@ int main()
     return 0;
 }
 INSERT AT ANY POSITION:
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+      int data;
+      struct node *next;
+}*head=NULL;
+void append(int val){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head == NULL){
+            head = newnode;
+      }
+      else{
+            struct node *temp = head;
+            while(temp -> next){
+                  temp = temp -> next;
+            }
+            temp -> next = newnode;
+      }
+}
+void display(){
+       struct node *temp = head;
+       while(temp -> next){
+             printf("%d ",temp->data);
+              temp = temp -> next;
+       }
+       printf("%d \n",temp->data);
+}
+void insertatposition(int val , int pn ){
+      struct node *newnode = (struct node*)malloc(sizeof(struct node));
+      struct node *temp = head;
+      newnode -> data = val;
+      newnode -> next = NULL;
+      if(head==NULL){
+            head=newnode;
+      }
+      else{
+            for(int i=0;i<pn-2;i++){
+                  temp = temp -> next;
+            }
+            newnode -> next = temp -> next ;
+            temp -> next = newnode;
+      }
+}
+int main()
+{
+      int pn;
+      scanf("%d",&pn);
+      append(10);
+      append(20);
+       append(40);
+        append(50);
+      display();
+      insertatposition(30 , pn);
+      display();
+   
+
+    return 0;
+}
 DELETE AT END:
 DELETE AT BEGIN:
 DELETE AT ANY POSITION:
