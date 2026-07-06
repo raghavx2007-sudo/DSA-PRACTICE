@@ -1,0 +1,164 @@
+Perfect-deficit-abundant Numbers
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+         int n;
+         int sum=0;
+         scanf("%d",&n);
+         for(int i=1;i<=sqrt(n);i++){
+             if(n%i==0){
+                 sum=sum+i+(n/i);
+             }
+         }
+         if(sum-n==n)printf("Perfect Number");
+         else if(sum-n>n)printf("Deficit Number");
+         else printf("Abundant Number");
+
+    return 0;
+}
+Armstrong Numbers
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+         int n,c,sum=0,samp=0,d=0;
+         scanf("%d%n",&n,&c);
+         int num=n;
+        while(n>0){
+           samp=n;
+            n/=10;
+           d=samp-(n*10);
+            sum+=pow(d,c);
+            
+        }
+if(num==sum)printf("%d is an armstrong number",num);
+else printf("%d Not an armstrong number",num);
+    return 0;
+}
+Prime Digits
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+        int n,count=0;
+        scanf("%d",&n);
+       while(n>0){
+           int sam=n;
+           n/=10;
+           int num=sam-n*10;
+          if(num==2||num==3||num==5||num==7)count++;
+       }
+       printf("Total Number of prime digits in the given Number:%d",count);
+    return 0;
+}
+Magic Number
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{   int num,sum=0;
+    scanf("%d",&num);
+    while(num>0){
+         int samp=num;
+            num/=10;
+           int d=samp-(num*10);
+            sum+=d;
+            if(num<=0 && sum>9){
+                num=sum;
+                sum=0;
+            }
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+Prime Number for a Range
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,count=0;
+    scanf("%d",&n);
+    for(int j=2;j<=n;j++){
+        count=0;
+    for(int i=1;i<=sqrt(j);i++){
+        
+        if(j%i==0){
+           count+=2;
+        }
+     
+    
+    }
+       if(count==2)printf("%d  ",j);
+           
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+  for(int i=1;i<=n;i++){
+      printf("*");
+      for(int j=1;j<n-1;j++){
+          if(i==1 || i==n){
+              printf("*");
+          }
+          else{
+              printf(" ");
+          }
+      }
+      printf("*\n");
+  }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1; i<=n; i++) {
+		for(int j=1; j<=n; j++) {
+			if(i==j || i+j==n+1 || i==1 || i==n || j==1 || j==n) {
+			    if()
+				printf("* ");
+			}
+			else {
+				printf("  ");
+			}
+		}
+printf("\n");
+
+	}
+	return 0;
+}
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1; i<=n; i++) {
+	   
+		for(int j=1; j<=n; j++) {
+		   
+			if(i==n/2+1 ||j-i==n/2 || i+j==n+(n/2)+1){
+				printf("+ ");
+			}
+			else {
+				printf("  ");
+			}
+}
+printf("\n");
+}
+
+	return 0;
+}
