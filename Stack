@@ -1,0 +1,52 @@
+1. Balanced Brackets Checker
+Detailed Scenario
+A compiler assistant must quickly verify whether every opening bracket in a student program is closed in the correct order.
+Detailed Description
+Given a string containing only brackets (), {}, and [], determine whether the string is balanced. A string is balanced when 
+each opening bracket has the same type of closing bracket and brackets close in the correct order.
+Input Format
+A single string S containing bracket characters.
+Output Format
+Print YES if the bracket string is balanced, otherwise print NO.
+Constraints
+
+
+1 <= |S| <= 100000
+S contains only characters from: ( ) { } [ ]
+Sample Input
+{[()]}
+Sample Output
+YES
+Explanation
+Push opening brackets into a stack. When a closing bracket appears, the top of the stack must contain its matching opening 
+bracket. At the end, the stack must be empty.
+Array Implimentation:
+#include <stdio.h>
+int main()
+{ 
+    char arr[100];
+    scanf(" %[^\n]",arr);
+    char stack[100];
+    int top=-1;
+    for(int i=0;arr[i]!='\0';i++){
+        if(arr[i]=='(' || arr[i]=='[' || arr[i]=='{' ){
+            stack[++top]=arr[i];
+        }
+        else if(top!=-1){
+            if(arr[i]=='}' && stack[top]!='{'){printf("Invalid");return 0;}
+             if(arr[i]==')' && stack[top]!='('){printf("Invalid");return 0;}
+              if(arr[i]==']' && stack[top]!='['){printf("Invalid");return 0;}
+            top--;
+        }
+        else{
+            printf("Invalid");
+            return 0;
+        }
+    }
+if(top!=-1)printf("Invalid");
+else{
+printf("Valid");
+    }
+    return 0;
+}
+Linked List Implementation :
