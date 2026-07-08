@@ -349,4 +349,91 @@ int main()
  
     return 0;
 }
-
+5. Min Stack Operations
+Detailed Scenario
+A game engine stores scores and must answer the minimum active score instantly after push and pop operations.
+Detailed Description
+Process stack operations. PUSH x adds x, POP removes the top if available, and MIN prints the current minimum. If MIN is 
+called on an empty stack, print EMPTY.
+Input Format
+First line: Q. Next Q lines: PUSH x, POP, or MIN.
+Output Format
+For every MIN operation, print the current minimum or EMPTY.
+Constraints
+ 1 <= Q <= 100000
+-10^9 <= x <= 10^9
+Sample Input
+6
+PUSH 5
+PUSH 3
+MIN
+POP
+MIN
+POP
+Sample Output
+3
+5
+Explanation
+Use two stacks: one normal stack and one minimum stack. Push the new minimum each time so MIN is O(1).
+5 Difficult Test Cases
+Test Case Input Expected Output
+1 9
+MIN
+PUSH 1
+Linked List Implimentation:
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct node {
+    int data;
+    struct node * next;
+}*head=NULL;
+void push(int val){
+    struct node *newnode = (struct node*)malloc(sizeof(struct node));
+    newnode -> data = val;
+    newnode -> next = head;
+    head = newnode;
+}
+void pop(){
+    struct node * temp = head;
+    head = head -> next;
+    free(temp);
+}
+void min(){
+    if(head == NULL){
+        printf("EMPTY");
+        return;
+    }
+    int min = head -> data;
+    if(head -> next){
+        struct node * temp = head -> next;
+        while(temp){
+            if(temp -> data < min)min = temp -> data;
+            temp = temp -> next;
+        }
+    }
+    printf("%d",min);
+}
+int main()
+{
+   int n;
+   scanf("%d",&n);
+   while(n>0){
+      char arr[100];
+      scanf(" %s",arr);
+       
+      if(arr[0]=='P' && arr[strlen(arr)-1]=='H'){
+         int num;
+          scanf("%d",&num);
+          push(num);
+      }
+      else if(arr[0]=='P' && arr[strlen(arr)-1]=='P'){
+          pop();
+      }
+      else{
+          min();
+      }
+      n--;
+   }
+    return 0;
+}
