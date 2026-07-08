@@ -89,3 +89,162 @@ int main()
     else printf("Invlalid");
     return 0;
 }
+2. Remove Adjacent Duplicate Letters
+Detailed Scenario
+A text-cleaning tool removes repeated adjacent letters caused by keyboard bounce.
+Detailed Description
+Given a lowercase string, repeatedly remove two equal adjacent characters until no such pair exists. Print the final string. If 
+the final string is empty, print EMPTY.
+Input Format
+A single lowercase string S.
+Output Format
+Print the string after all removals. Print EMPTY if the result has no characters.
+Constraints
+
+
+1 <= |S| <= 100000
+S contains lowercase English letters only.
+Sample Input
+abbaca
+Sample Output
+ca
+Explanation
+Use a stack. If the current character is equal to the stack top, pop it. Otherwise push it. For abbaca: remove bb, then aa, 
+leaving ca.
+List Implimentation :
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct node 
+{
+    char data;
+    struct node * next;
+}*head=NULL;
+void push(char val){
+    struct node * newnode = (struct node*)malloc(sizeof(struct node));
+    newnode -> data = val;
+    newnode -> next = head;
+    head = newnode;
+}
+void pop(){
+    struct node * temp = head;
+    head = head -> next;
+    free(temp);
+}
+void display(){
+    struct node * temp = head;
+    struct node * anshead = NULL;
+    while(temp){
+        struct node*ans = (struct node*)malloc(sizeof(struct node));
+        ans -> data = temp -> data;
+        ans -> next = anshead;
+        anshead = ans;
+        temp=temp->next;
+    }
+    struct node *fitemp = anshead;
+    while(fitemp){
+        printf("%c",fitemp->data);
+        fitemp = fitemp -> next;
+    }
+}
+int main()
+{   
+    char arr[100];
+    scanf("%[^\n]",arr);
+    for(int i=0;arr[i]!='\0';i++){
+          if(head!=NULL && arr[i]==head -> data){
+              pop();
+          }
+          else{
+              push(arr[i]);
+          }
+        
+    }
+    if(head == NULL )printf("Empty");
+ display();
+    return 0;
+}
+4. Next Greater Element to the Right
+Detailed Scenario
+A stock dashboard needs to show the next future price that is higher than the current price.
+Detailed Description
+Given an array of integers, for every element print the next greater element on its right. If no greater element exists, print -1.
+Input Format
+First line: integer N. Second line: N integers.
+Output Format
+Print N integers where the i-th value is the next greater element for arr[i], or -1.
+Constraints
+ 1 <= N <= 100000
+-10^9 <= arr[i] <= 10^9
+Sample Input
+5
+4 5 2 25 7
+Sample Output
+5 25 25 -1 -1
+Explanation
+Scan from right to left. Maintain a stack of useful greater elements. Pop all elements less than or equal to current. The stack 
+top becomes the answer.
+List Implementation :
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct node 
+{
+    int data;
+    struct node * next;
+}*head=NULL;
+void push(int val){
+    struct node * newnode = (struct node*)malloc(sizeof(struct node));
+    newnode -> data = val;
+    newnode -> next = head;
+    head = newnode;
+}
+void pop(){
+    struct node * temp = head;
+    head = head -> next;
+    free(temp);
+}
+void display(){
+    struct node * temp = head;
+    while(temp){
+        printf("%d ",temp->data);
+        temp=temp->next;
+    }
+}
+int main()
+{ 
+    int n;
+    scanf("%d",&n);
+   int arr[n];
+   for(int i=0;i<n;i++){
+       scanf("%d",&arr[i]);
+   }
+   int arr1[n][2];
+   int st=0;
+   for(int i=n-1;i>=0;i--){
+       if(head==NULL){
+          arr1[st][0]=arr[i];
+          arr1[st++][1]=-1;
+       }
+       else{
+           while(head && head->data <= arr[i]){
+               pop();
+           }
+           if(head==NULL){
+                arr1[st][0]=arr[i];
+                arr1[st++][1]=-1;
+           }
+           else{
+               arr1[st][0]=arr[i];
+               arr1[st++][1]=head->data;
+           }
+       }
+       push(arr[i]);
+   }
+  for(int i=st-1;i>=0;i--){
+      printf("%d ",arr1[i][1]);
+  }
+ 
+    return 0;
+}
+
